@@ -1,21 +1,22 @@
 <kyn-ui-shell>
   <kyn-header divider="" apptitle="Shidoka Angular">
-    <!-- <kyn-header-panel slot="left" heading="Panel Heading">
-      <SwitcherIcon slot="button" />
+    <kyn-header-panel slot="left" heading="Panel Heading">
+      <!-- <SwitcherIcon slot="button" /> -->
+      <svg ibmIcon="apps" size="24" fill="currentColor" slot="button"></svg>
 
       <kyn-header-panel-link href="javascript:void(0)">
-        <UserAvatar24 />
+        <svg ibmIcon="user--avatar" size="24" fill="currentColor"></svg>
         Link 1
       </kyn-header-panel-link>
       <kyn-header-panel-link href="javascript:void(0)">
-        <UserAvatar24 />
+        <svg ibmIcon="user--avatar" size="24" fill="currentColor"></svg>
         Link 2
       </kyn-header-panel-link>
       <kyn-header-panel-link href="javascript:void(0)">
-        <UserAvatar24 />
+        <svg ibmIcon="user--avatar" size="24" fill="currentColor"></svg>
         Link 3
       </kyn-header-panel-link>
-    </kyn-header-panel> -->
+    </kyn-header-panel>
 
     <kyn-header-nav>
       <kyn-header-link href="javascript:void(0)"> Link 1 </kyn-header-link>
@@ -52,14 +53,24 @@
     </kyn-header-flyouts>
   </kyn-header>
 
-  <!-- <kyn-local-nav>
+  <kyn-local-nav>
     <kyn-local-nav-link href="javascript:void(0)" active="">
-      <UserAvatar20 slot="icon" />
+      <svg
+        ibmIcon="user--avatar"
+        size="20"
+        slot="icon"
+        fill="currentColor"
+      ></svg>
       Link 1
     </kyn-local-nav-link>
 
     <kyn-local-nav-link href="javascript:void(0)">
-      <UserAvatar20 slot="icon" />
+      <svg
+        ibmIcon="user--avatar"
+        size="20"
+        slot="icon"
+        fill="currentColor"
+      ></svg>
       Link 2
 
       <kyn-local-nav-link slot="links" href="javascript:void(0)">
@@ -71,7 +82,12 @@
     </kyn-local-nav-link>
 
     <kyn-local-nav-link href="javascript:void(0)" expanded="">
-      <UserAvatar20 slot="icon" />
+      <svg
+        ibmIcon="user--avatar"
+        size="20"
+        slot="icon"
+        fill="currentColor"
+      ></svg>
       Link 3
 
       <kyn-local-nav-link slot="links" href="javascript:void(0)">
@@ -85,9 +101,79 @@
         </kyn-local-nav-link>
       </kyn-local-nav-link>
     </kyn-local-nav-link>
-  </kyn-local-nav> -->
+  </kyn-local-nav>
 
   <main>
+    <div class="kd-grid">
+      <div class="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-12">
+        <h1 class="kd-type--headline-03">Shidoka Angular Sample App</h1>
+      </div>
+
+      <div class="kd-grid__col--sm-4 kd-grid__col--md-4 kd-grid__col--lg-8">
+        <kd-chart
+          type="bar"
+          height="400"
+          chartTitle="Bar Chart"
+          description="Description"
+          [labels]="['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']"
+          [datasets]="[
+            {
+              label: 'Dataset 1',
+              data: [12, 19, 3, 5, 2, 3]
+            },
+            {
+              label: 'Dataset 2',
+              data: [8, 15, 7, 9, 6, 13]
+            }
+          ]"
+          [options]="{
+        scales: {
+          x: {
+            title: {
+              text: 'Color',
+            },
+          },
+          y: {
+            title: {
+              text: 'Votes',
+            },
+          },
+        },
+      }"
+        ></kd-chart>
+      </div>
+
+      <div class="kd-grid__col--sm-4 kd-grid__col--md-4 kd-grid__col--lg-4">
+        <kd-chart
+          type="doughnut"
+          chartTitle="Doughnut Chart"
+          description="Description"
+          height="400"
+          [labels]="['Blue', 'Red', 'Orange', 'Yellow', 'Green', 'Purple']"
+          [datasets]="[
+        {
+          label: 'Dataset 1',
+          data: [12, 19, 3, 5, 2, 3],
+        },
+      ]"
+          [options]="{
+      scales: {
+        x: {
+          title: {
+            text: 'Color',
+          },
+        },
+        y: {
+          title: {
+            text: 'Votes',
+          },
+        },
+      },
+    }"
+        ></kd-chart>
+      </div>
+    </div>
+
     <router-outlet></router-outlet>
   </main>
 
