@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import userIcon from '@kyndryl-design-system/shidoka-icons/svg/monochrome/16/user.svg';
+import questionIcon from '@kyndryl-design-system/shidoka-icons/svg/monochrome/24/question.svg';
+import sampleIcon from '@kyndryl-design-system/shidoka-icons/svg/monochrome/16/circle-stroke.svg'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shidoka-sample-angular';
+  userAvatar = userIcon;
+  questionIcon = questionIcon;
+  sampleIcon = sampleIcon;
 }

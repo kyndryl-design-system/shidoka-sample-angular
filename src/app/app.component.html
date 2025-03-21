@@ -1,7 +1,7 @@
 <kyn-ui-shell>
-  <kyn-header divider="" apptitle="Shidoka Angular">
-    <kyn-header-panel slot="left" heading="Panel Heading">
-      <!-- <SwitcherIcon slot="button" /> -->
+  <kyn-header apptitle="Shidoka Angular">
+    <!-- <kyn-header-panel slot="left" heading="Panel Heading">
+      <SwitcherIcon slot="button" />
       <svg ibmIcon="apps" size="24" fill="currentColor" slot="button"></svg>
 
       <kyn-header-panel-link href="javascript:void(0)">
@@ -16,7 +16,7 @@
         <svg ibmIcon="user--avatar" size="24" fill="currentColor"></svg>
         Link 3
       </kyn-header-panel-link>
-    </kyn-header-panel>
+    </kyn-header-panel> -->
 
     <kyn-header-nav>
       <kyn-header-link href="javascript:void(0)"> Link 1 </kyn-header-link>
@@ -36,6 +36,18 @@
     </kyn-header-nav>
 
     <kyn-header-flyouts>
+      <kyn-header-flyout label="Menu Label">
+        <span slot="button"><svg-icon slot="icon" src="{{questionIcon}}"></svg-icon></span>
+
+        <kyn-header-link href="javascript:void(0)">
+          <span><svg-icon slot="icon" src="{{sampleIcon}}"></svg-icon></span>
+          Example 1
+        </kyn-header-link>
+        <kyn-header-link href="javascript:void(0)">
+          <span><svg-icon slot="icon" src="{{sampleIcon}}"></svg-icon></span>
+          Example 2
+        </kyn-header-link>
+      </kyn-header-flyout>
       <kyn-header-flyout>
         <span slot="button">Sign in</span>
 
@@ -55,22 +67,12 @@
 
   <kyn-local-nav>
     <kyn-local-nav-link href="javascript:void(0)" active="">
-      <svg
-        ibmIcon="user--avatar"
-        size="20"
-        slot="icon"
-        fill="currentColor"
-      ></svg>
+      <svg-icon slot="icon" src="{{userAvatar}}"></svg-icon>
       Link 1
     </kyn-local-nav-link>
 
     <kyn-local-nav-link href="javascript:void(0)">
-      <svg
-        ibmIcon="user--avatar"
-        size="20"
-        slot="icon"
-        fill="currentColor"
-      ></svg>
+      <svg-icon slot="icon" src="{{userAvatar}}"></svg-icon>
       Link 2
 
       <kyn-local-nav-link slot="links" href="javascript:void(0)">
@@ -82,12 +84,7 @@
     </kyn-local-nav-link>
 
     <kyn-local-nav-link href="javascript:void(0)" expanded="">
-      <svg
-        ibmIcon="user--avatar"
-        size="20"
-        slot="icon"
-        fill="currentColor"
-      ></svg>
+      <svg-icon slot="icon" src="{{userAvatar}}"></svg-icon>
       Link 3
 
       <kyn-local-nav-link slot="links" href="javascript:void(0)">
@@ -179,7 +176,7 @@
 
   <kyn-footer>
     <span slot="copyright">
-      Copyright &copy; 2023 Kyndryl Inc. All rights reserved.
+      Copyright &copy; 2025 Kyndryl Inc. All rights reserved.
     </span>
   </kyn-footer>
 </kyn-ui-shell>
