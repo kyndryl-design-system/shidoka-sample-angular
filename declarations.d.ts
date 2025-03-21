@@ -1,1 +1,4 @@
-declare module '@carbon/icons/*';
+declare module '*.svg' {
+    const content: string;
+    export default content;
+  }
