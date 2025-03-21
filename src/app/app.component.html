@@ -1,11 +1,16 @@
 <kyn-ui-shell>
   <kyn-header apptitle="Shidoka Angular">
     <kyn-header-nav>
-      <kyn-header-link href="javascript:void(0)"> Link 1 </kyn-header-link>
+      <kyn-header-link href="javascript:void(0)">
+        <svg-icon src="{{ sampleIcon }}"></svg-icon>
+        Link 1
+      </kyn-header-link>
       <kyn-header-link href="javascript:void(0)" isActive>
+        <svg-icon src="{{ sampleIcon }}"></svg-icon>
         Link 2
       </kyn-header-link>
       <kyn-header-link href="javascript:void(0)">
+        <svg-icon src="{{ sampleIcon }}"></svg-icon>
         Link 3
 
         <kyn-header-link slot="links" href="javascript:void(0)">
@@ -18,25 +23,24 @@
     </kyn-header-nav>
 
     <kyn-header-flyouts>
-      <kyn-header-flyout label="Menu Label">
-        <span slot="button"><svg-icon slot="icon" src="{{questionIcon}}"></svg-icon></span>
+      <kyn-header-flyout label="Help">
+        <svg-icon slot="button" src="{{ questionIcon }}"></svg-icon>
 
         <kyn-header-link href="javascript:void(0)">
-          <span><svg-icon slot="icon" src="{{sampleIcon}}"></svg-icon></span>
+          <svg-icon slot="icon" src="{{ sampleIcon }}"></svg-icon>
           Example 1
         </kyn-header-link>
         <kyn-header-link href="javascript:void(0)">
-          <span><svg-icon slot="icon" src="{{sampleIcon}}"></svg-icon></span>
+          <svg-icon slot="icon" src="{{ sampleIcon }}"></svg-icon>
           Example 2
         </kyn-header-link>
       </kyn-header-flyout>
-      <kyn-header-flyout>
-        <span slot="button">Sign in</span>
 
-        <div>
-          <kyn-header-link href="javascript:void(0)"> Login </kyn-header-link>
-          <kyn-header-link href="javascript:void(0)"> Sign up </kyn-header-link>
-        </div>
+      <kyn-header-flyout label="Account">
+        <svg-icon slot="button" src="{{ userIcon20 }}"></svg-icon>
+
+        <kyn-header-link href="javascript:void(0)"> Login </kyn-header-link>
+        <kyn-header-link href="javascript:void(0)"> Sign up </kyn-header-link>
       </kyn-header-flyout>
 
       <kyn-header-flyout assistiveText="My Account" hideArrow>
@@ -49,12 +53,12 @@
 
   <kyn-local-nav>
     <kyn-local-nav-link href="javascript:void(0)" active="">
-      <svg-icon slot="icon" src="{{userAvatar}}"></svg-icon>
+      <svg-icon slot="icon" src="{{ sampleIcon }}"></svg-icon>
       Link 1
     </kyn-local-nav-link>
 
     <kyn-local-nav-link href="javascript:void(0)">
-      <svg-icon slot="icon" src="{{userAvatar}}"></svg-icon>
+      <svg-icon slot="icon" src="{{ sampleIcon }}"></svg-icon>
       Link 2
 
       <kyn-local-nav-link slot="links" href="javascript:void(0)">
@@ -66,7 +70,7 @@
     </kyn-local-nav-link>
 
     <kyn-local-nav-link href="javascript:void(0)" expanded="">
-      <svg-icon slot="icon" src="{{userAvatar}}"></svg-icon>
+      <svg-icon slot="icon" src="{{ sampleIcon }}"></svg-icon>
       Link 3
 
       <kyn-local-nav-link slot="links" href="javascript:void(0)">
